@@ -1,0 +1,287 @@
+:root {
+    --primary: #0E7D67;
+    --primary-40: hsl(168, 80%, 27%, .4);
+    --primary-30: hsl(168, 80%, 27%, .3);
+    --primary-20: hsl(168, 80%, 27%, .2);
+    --primary-10: hsl(168, 80%, 27%, .1);
+
+    --blue: #DEF0FF;
+
+    --purple: #E2D9FB;
+
+    --gray-light: #DEDEDE;
+    --gray-text: #7e7e7e;
+}
+
+html {
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1;
+    color: var(--primary);
+}
+
+h1, h2, h3 {
+    font-family: 'Lilita One', cursive;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.625rem;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+p, button, a {
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* ============================ */
+/* BUTTON */
+/* ============================ */
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: .625rem 1.25rem;
+    font-weight: 600;
+    border-radius: 4px;
+
+    /* link specific */
+    text-decoration: none;
+}
+
+.btn.inline {
+    display: inline-flex;
+}
+
+.btn.outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn.text {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.btn.text:hover, .btn.outline:hover {
+    background-color: var(--primary-10);
+}
+
+/* ============================ */
+/* LAYOUT */
+/* ============================ */
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-stack {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+}
+
+.page-section {
+    padding-block: 32px;
+}
+
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* ============================ */
+/* BACKGROUNDS */
+/* ============================ */
+
+.gradient-bk {
+    background: linear-gradient(white, var(--primary-20));
+}
+
+.blue-bk {
+    background: var(--blue);
+}
+
+.purple-bk {
+    background: var(--purple);
+}
+
+/* ============================ */
+/* TEXT */
+/* ============================ */
+
+.txt-wrapper {
+    max-width: 700px;
+}
+
+.txt-centered {
+    text-align: center;
+}
+
+.txt-highlight {
+    color: var(--primary);
+}
+
+/* ============================ */
+/* LISTS */
+/* ============================ */
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    
+}
+
+.checklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 1rem;
+}
+
+.checklist li {
+    list-style: url("../images/icons/checkmark.svg") inside;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+/* ============================ */
+/* NAV */
+/* ============================ */
+
+header {
+    padding-block: 1.5rem;
+}
+
+#topnav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#topnav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#topnav-links a {
+    font-weight: 700;
+}
+
+#services-target {
+    
+}
+
+#services-dropdown {
+    display: none;
+}
+
+/* ============================ */
+/* FOOTER */
+/* ============================ */
+
+footer {
+}
+
+.footer-grid {
+    display: grid;
+    gap: 32px;
+    padding-block: 32px;
+}
+
+@media screen and (min-width: 960px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+.footer-about {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-services h3 {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.copyright {
+    color: var(--gray-text);
+    padding-block: 16px;
+    text-align: center;
+}
+
+
+/* ============================ */
+/* SPECIFIC */
+/* ============================ */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.service-card {
+    display: block;
+    width: 100%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2) ;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+#vision-therapy h3 {
+    color: black;
+}
+
+#vision-therapy h3 strong {
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+#testimonial-section {
+    justify-content: center;
+}
