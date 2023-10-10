@@ -11,6 +11,8 @@
 
     --gray-light: #DEDEDE;
     --gray-text: #7e7e7e;
+
+    --section-padding: clamp(16px, 10vw, 64px);
 }
 
 html {
@@ -108,12 +110,20 @@ a {
 
 .content-stack {
     display: grid;
-    gap: 1rem;
+    gap: 16px;
     align-content: start;
 }
 
+.content-stack.stack-lg {
+    gap: 32px;
+}
+
+.content-stack.stack-section {
+    gap: var(--section-padding);
+}
+
 .page-section {
-    padding-block: 32px;
+    padding-block: var(--section-padding);
 }
 
 .col-2 {
@@ -171,7 +181,7 @@ li {
 
 .checklist {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 0 1rem;
 }
 
@@ -255,26 +265,73 @@ footer {
 
 
 /* ============================ */
-/* SPECIFIC */
+/* HOME PAGE */
 /* ============================ */
+
+#hero {
+    --hero-padding: 64px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 700px;
+    align-items: center;
+    gap: 32px;
+
+    padding-top: var(--hero-padding);
+}
+
+.hero-content {
+    padding-bottom: var(--hero-padding);
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.services-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    align-items: center;
+}
 
 .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 24px;
 }
 
 .service-card {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 16px;
     width: 100%;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2) ;
-    padding: 1rem;
+    padding: 1.5rem;
     font-weight: 700;
     border-radius: 4px;
 }
 
+.service-card img {
+    width: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 445px 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.team-image {
+    width: 100%;
+}
+
 #vision-therapy h3 {
     color: black;
+    background-color: var(--primary-10);
+    padding: 16px 24px;
 }
 
 #vision-therapy h3 strong {
