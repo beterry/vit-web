@@ -9,28 +9,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lilita+One&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Vision Integration Team</title>
 </head>
 <body>
+    <div id="mobilenav-bk" onclick="toggleMobileNav()"></div>
     <header>
         <div id="topnav-wrapper" class="wrapper">
-            <p>Logo here</p>
+            <div>
+                <p>Logo here</p>
+            </div>
             <nav>
                 <ul id="topnav-links">
-                    <li id="services-target">
-                        Services
+                    <li id="services-target" class="topnav-link">
+                        <p>Services</p>
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
                         <ul id="services-dropdown">
-                            <li><a href="#">Vision Therapy</a></li>
-                            <li><a href="#">Neuro-Rehab</a></li>
-                            <li><a href="#">Occupational Therapy</a></li>
-                            <li><a href="#">Sensory Processing Therapy</a></li>
-                            <li><a href="#">Sports Vision Training</a></li>
+                            <li><a class="service-link" href="#">Vision Therapy</a></li>
+                            <li><a class="service-link" href="#">Neuro-Rehab</a></li>
+                            <li><a class="service-link" href="#">Occupational Therapy</a></li>
+                            <li><a class="service-link" href="#">Sensory Processing Therapy</a></li>
+                            <li><a class="service-link" href="#">Sports Vision Training</a></li>
                         </ul>
                     </li>
-                    <li><a class="btn text" href="#">Meet the Team</a></li>
-                    <li><a class="btn text" href="#">Testimonials</a></li>
+                    <li><a class="btn text topnav-link" href="#">Meet the Team</a></li>
+                    <li><a class="btn text topnav-link" href="#">Testimonials</a></li>
+                    <div class="spacer"></div>
                     <li><a class="btn outline" href="#">Contact Us</a></li>
                 </ul>
+                <button id="mobilenav-btn" class="btn icon" onclick="toggleMobileNav()">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
             </nav>
         </div>
     </header>
@@ -216,5 +229,6 @@
         </div>
         <p class="copyright">Copyright 2023</p>
     </footer>
+    <script src="scripts/vit.js"></script>
 </body>
 </html>

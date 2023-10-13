@@ -1,0 +1,9 @@
+console.log('Hello, world.');
+
+const toggleMobileNav = () => {
+    console.log('mobile menu clicked')
+    const mobileNav = document.querySelector('#topnav-links');
+    const mobileNavBk = document.querySelector('#mobilenav-bk')
+    mobileNav.classList.toggle('show');
+    mobileNavBk.classList.toggle('show');
+}
