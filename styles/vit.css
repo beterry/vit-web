@@ -13,7 +13,18 @@
     --gray-text: #7e7e7e;
 
     --section-padding: clamp(16px, 10vw, 64px);
+    --section-padding-xl: clamp(16px, 10vw, 128px);
 }
+
+/* REVMOVE */
+.logo {
+    background-color: var(--primary);
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+/* REVMOVE */
 
 html {
 
@@ -133,6 +144,10 @@ a {
     padding-block: var(--section-padding);
 }
 
+.page-section-xl {
+    padding-block: var(--section-padding-xl);
+}
+
 .col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -200,6 +215,26 @@ li {
     list-style: url("../images/icons/checkmark.svg") inside;
     padding-block: 1rem;
     border-bottom: 1px solid var(--gray-light);
+}
+
+/* ============================ */
+/* PLANTS */
+/* ============================ */
+
+.white-plant {
+    position: relative;
+}
+
+.white-plant::after {
+    width: 200px;
+    position: absolute;
+    bottom: -16px;
+    /* TODO */
+    right: calc(700px + (80% - 700px));
+}
+
+.white-plant.plant-1::after {
+    content: url('/images/plants/white-plant-1.svg');
 }
 
 /* ============================ */
@@ -358,18 +393,22 @@ footer {
 .footer-grid {
     display: grid;
     gap: 32px;
-    padding-block: 32px;
+    padding-block: var(--section-padding);
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 @media screen and (min-width: 960px) {
     .footer-grid {
         grid-template-columns: 2fr 1fr 1fr;
     }
-}
-
-.footer-about {
-    display: flex;
-    gap: 16px;
+    .footer-about {
+        flex-direction: row;
+    }
 }
 
 .footer-social {
@@ -377,10 +416,28 @@ footer {
     gap: 16px;
 }
 
-.footer-services h3 {
-    color: black;
-    font-size: 1.2rem;
+.social-link {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.footer-services h3 {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 959px) {
+    .footer-services a {
+        padding-left: 24px;
+    }
+}
+
 
 .copyright {
     color: var(--gray-text);
@@ -410,6 +467,26 @@ footer {
     padding-bottom: var(--section-padding);
 }
 
+.hero-img-wrapper {
+    position: relative;
+}
+
+#hero-img-flower-1 {
+    width: 75px;
+    position: absolute;
+    top: 70%;
+    left: -100px;
+}
+
+#hero-img-flower-2 {
+    display: none;
+    width: clamp(100px, 20vw, 200px);
+    position: absolute;
+    top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
+    right: 15%;
+    
+}
+
 .hero-img {
     display: none;
     position: absolute;
@@ -436,11 +513,17 @@ footer {
         min-height: 500px;
         width: 100%;
     }
+    #hero-img-flower-2 {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1080px) {
     .hero-img {
         left: auto;
+    }
+    #hero-img-flower-1 {
+        left: calc(-30px - ((700px - 100%) / 2));
     }
 }
 
@@ -454,6 +537,10 @@ footer {
     .services-section {
         grid-template-columns: 1fr 2fr;
     }
+}
+
+.services-section {
+    position: relative;
 }
 
 .services-grid {
@@ -474,13 +561,13 @@ footer {
     width: 100%;
     height: 100%;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2) ;
-    padding: 1.5rem;
+    padding: 16px 20px;
     font-weight: 700;
     border-radius: 4px;
 }
 
 .service-card img {
-    width: 40px;
+    width: 50px;
 }
 
 .team-grid {
@@ -506,6 +593,10 @@ footer {
     max-width: 445px;
 }
 
+#vision-therapy {
+    position: relative;
+}
+
 #vision-therapy h3 {
     color: black;
     background-color: var(--primary-10);
@@ -517,6 +608,24 @@ footer {
     text-transform: uppercase;
 }
 
+#how-we-do-it {
+    position: relative;
+}
+
+#how-we-do-it::after {
+    content: url("/images/plants/fern-sun.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc((100% - 700px) - 128px);
+}
+
 #testimonial-section {
     justify-content: center;
+}
+
+.testimonial-quote {
+    margin: 0 auto;
+    display: inline-block;
+    width: 60px;
 }
