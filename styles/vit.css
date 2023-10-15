@@ -124,6 +124,7 @@ a {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .content-stack {
@@ -141,10 +142,12 @@ a {
 }
 
 .page-section {
+    position: relative;
     padding-block: var(--section-padding);
 }
 
 .page-section-xl {
+    position: relative;
     padding-block: var(--section-padding-xl);
 }
 
@@ -225,16 +228,68 @@ li {
     position: relative;
 }
 
-.white-plant::after {
+.white-plant > * {
+    position: relative;
+    z-index: 1;
+}
+
+.white-plant::before {
     width: 200px;
     position: absolute;
     bottom: -16px;
-    /* TODO */
-    right: calc(700px + (80% - 700px));
+    left: max(calc(10% - 100px), calc((40% - 600px) + 10% - 100px));
+    z-index: 0;
 }
 
-.white-plant.plant-1::after {
+@media screen and (max-width: 1000px) {
+    .white-plant::before {
+        opacity: .5;
+    }
+}
+
+.white-plant.plant-1::before {
     content: url('/images/plants/white-plant-1.svg');
+}
+
+/* ============================ */
+/* FLOWERS */
+/* ============================ */
+
+.flower {
+    position: absolute;
+}
+
+#hero-img-flower-1 {
+    width: 75px;
+    position: absolute;
+    top: 70%;
+    left: -100px;
+}
+
+#hero-img-flower-2 {
+    display: none;
+    width: clamp(100px, 20vw, 200px);
+    position: absolute;
+    top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
+    right: 15%;
+}
+
+#team-flower {
+    width: 100px;
+    top: calc(-50px - 64px);
+    right: 100%;
+}
+
+@media screen and (max-width: 1399px) {
+    #team-flower {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    #team-flower {
+        top: calc(-50px - 16px);
+    }
 }
 
 /* ============================ */
@@ -304,10 +359,10 @@ header {
     display: block;
     padding: 0 1.25rem;
     font-weight: 600;
+    color: var(--primary);
 }
 
 #services-target p {
-    color: black;
     padding: 8px 0;
 }
 
@@ -471,21 +526,7 @@ footer {
     position: relative;
 }
 
-#hero-img-flower-1 {
-    width: 75px;
-    position: absolute;
-    top: 70%;
-    left: -100px;
-}
 
-#hero-img-flower-2 {
-    display: none;
-    width: clamp(100px, 20vw, 200px);
-    position: absolute;
-    top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
-    right: 15%;
-    
-}
 
 .hero-img {
     display: none;
@@ -572,7 +613,7 @@ footer {
 
 .team-grid {
     display: grid;
-    gap: 64px;
+    gap: var(--section-padding);
     align-items: center;
 }
 
@@ -615,7 +656,7 @@ footer {
 #how-we-do-it::after {
     content: url("/images/plants/fern-sun.svg");
     position: absolute;
-    top: 0;
+    bottom: -100px;
     right: 0;
     width: calc((100% - 700px) - 128px);
 }
