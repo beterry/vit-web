@@ -267,11 +267,10 @@ li {
 }
 
 #hero-img-flower-2 {
-    display: none;
     width: clamp(100px, 20vw, 200px);
     position: absolute;
-    top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
-    right: 15%;
+    top: clamp(-84px, -10vw, -184px);
+    right: max(calc(10% - 50px), calc((40% - 600px) + 10%))
 }
 
 #team-flower {
@@ -576,7 +575,8 @@ footer {
         width: 100%;
     }
     #hero-img-flower-2 {
-        display: block;
+        top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
+        right: 15%;
     }
 }
 
