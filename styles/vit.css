@@ -300,13 +300,13 @@ header {
     padding-block: 1.5rem;
 }
 
-#topnav-wrapper {
+#header-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#topnav-links {
+#topnav {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -317,10 +317,26 @@ header {
     background-color: white;
     z-index: 100;
     padding: 16px;
+    padding-top: 0;
     transition: .5s right;
+    overflow-y: auto;
 }
 
-#topnav-links.show {
+#mobilenav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    padding-top: 1.5rem;
+}
+
+#topnav-links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#topnav.show {
     right: 0;
 }
 
@@ -396,14 +412,19 @@ header {
     #mobilenav-bk {
         display: none;
     }
-    #topnav-links {
+    #mobilenav-header {
+        display: none;
+    }
+    #topnav {
         position: static;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
         width: auto;
         background: transparent;
         padding: 0;
+    }
+    #topnav-links {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
     }
     #services-target {
         display: flex;
