@@ -210,14 +210,28 @@ li {
 
 .checklist {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 0 1rem;
+    grid-template-columns: 1fr;
+    gap: 0 var(--section-padding);
+}
+
+@media screen and (min-width: 600px) {
+    .checklist {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
 }
 
 .checklist li {
-    list-style: url("../images/icons/checkmark.svg") inside;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    list-style: none;
     padding-block: 1rem;
     border-bottom: 1px solid var(--gray-light);
+}
+
+.checklist li::before {
+    content: url("/images/icons/checkmark.svg");
 }
 
 /* ============================ */
@@ -591,13 +605,13 @@ footer {
 
 .services-section {
     display: grid;
-    gap: 32px;
-    align-items: center;
+    gap: var(--section-padding);
+    align-items: start;
 }
 
 @media screen and (min-width: 1020px) {
     .services-section {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
     }
 }
 
@@ -672,14 +686,21 @@ footer {
 
 #how-we-do-it {
     position: relative;
+    overflow: hidden;
 }
 
 #how-we-do-it::after {
     content: url("/images/plants/fern-sun.svg");
     position: absolute;
-    bottom: -100px;
-    right: 0;
-    width: calc((100% - 700px) - 128px);
+    top: 100px;
+    right: calc((40% - 600px) + 10%);
+    width: 372px;
+}
+
+@media screen and (max-width: 1280px) {
+    #how-we-do-it::after {
+        display: none;
+    }
 }
 
 #testimonial-section {
