@@ -85,6 +85,7 @@ a {
     padding: .625rem 1.25rem;
     font-weight: 600;
     border-radius: 4px;
+    cursor: pointer;
 
     /* link specific */
     text-decoration: none;
@@ -160,6 +161,14 @@ a {
 
 .spacer {
     flex-grow: 1;
+}
+
+.read-more.hide {
+    display: none;
+}
+
+.read-more-btn {
+    margin-left: -16px;
 }
 
 /* ============================ */
