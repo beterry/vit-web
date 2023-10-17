@@ -308,7 +308,7 @@ li {
     }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 599px) {
     #team-flower {
         top: calc(-50px - 16px);
     }
@@ -680,6 +680,7 @@ footer {
 
 #vision-therapy {
     position: relative;
+    overflow: hidden;
 }
 
 #vision-therapy h3 {
@@ -695,7 +696,6 @@ footer {
 
 #how-we-do-it {
     position: relative;
-    overflow: hidden;
 }
 
 #how-we-do-it::after {
