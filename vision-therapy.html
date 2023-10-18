@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/vit.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400" rel="stylesheet" />
+    <title>Vision Therapy | Vision Integration Team</title>
+</head>
+<body>
+    <div id="mobilenav-bk" onclick="toggleMobileNav()"></div>
+    <header>
+        <div id="header-wrapper" class="wrapper">
+            <div>
+                <p>Logo here</p>
+            </div>
+            <nav id="topnav">
+                <div id="mobilenav-header">
+                    <p>Logo here</p>
+                    <button id="mobilenav-btn" class="btn icon" onclick="toggleMobileNav()">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                </div>
+                <ul id="topnav-links">
+                    <li id="services-target" class="topnav-link">
+                        <p>Services</p>
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                        <ul id="services-dropdown">
+                            <li><a class="service-link" href="#">Vision Therapy</a></li>
+                            <li><a class="service-link" href="#">Neuro-Rehab</a></li>
+                            <li><a class="service-link" href="#">Occupational Therapy</a></li>
+                            <li><a class="service-link" href="#">Sensory Processing Therapy</a></li>
+                            <li><a class="service-link" href="#">Sports Vision Training</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="btn text topnav-link" href="#">Meet the Team</a></li>
+                    <li><a class="btn text topnav-link" href="#">Testimonials</a></li>
+                    <div class="spacer"></div>
+                    <li><a class="btn outline" href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="mobilenav-btn" class="btn icon" onclick="toggleMobileNav()">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="service-hero gradient-bk green-plant plant-1">
+            <div class="service-hero-content wrapper content-stack">
+                <img class="service-hero-icon" src="images/icons/vision-therapy.svg" alt="Eye ball in the shape of a magnifying glass">
+                <h1>Vision Therapy</h1>
+                <p>Vision Therapy is the science of applying proven methods and techniques that correct or enhance vision skills or other visual deficits when corrective lenses or surgery is not indicated.</p>
+            </div>
+        </section>
+        <section class="page-section purple-bk white-plant plant-1">
+            <div id="testimonial-section" class="wrapper content-stack">
+                <img class="testimonial-quote" src="images/home/quote.svg" alt="quote" />
+                <h2 class="txt-centered">What Our Patients Say</h2>
+                <p class="txt-wrapper txt-centered">Working with the Vision Integration Team was nothing short of amazing. Our daughter is a top performer now in reading and math, loves a variety of activities, and plays volleyball!  We have seen a change in maturity and confidence. I cannot say enough good things about our experience. The Vision Integration Team are top-notch practitioners.</p>
+                <p class="txt-centered txt-highlight">Written by <strong>Katie</strong></p>
+                <div class="txt-centered"><a class="btn inline" href="#">Read more testimonials</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="wrapper">
+        <div class="footer-grid">
+            <article class="footer-about">
+                <div class="logo"></div>
+                <div class="content-stack">
+                    <h2>About</h2>
+                    <p>The Visual Integration Team of Columbus offers an innovative, “whole-person” therapeutic approach unique to central Ohio through the integration of our services.</p>
+                    <div class="footer-social">
+                        <a class="social-link" href="#"><img src="images/icons/FB.svg" alt="Facebook" /></a>
+                        <a class="social-link" href="#"><img src="images/icons/IG.svg" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </article>
+            <article class="footer-services content-stack">
+                <h3>Services</h3>
+                <nav>
+                    <ul class="content-stack">
+                        <li><a href="#">Vision Therapy</a></li>
+                        <li><a href="#">Neuro-Rehab</a></li>
+                        <li><a href="#">Occupational Therapy</a></li>
+                        <li><a href="#">Sensory Processing Therapy</a></li>
+                        <li><a href="#">Sports Vision Training</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <nav>
+                <ul class="content-stack">
+                    <li><a href="#">Meet the Team</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li class="content-stack">
+                        <a href="#">Contact Us</a>
+                        <div>
+                            <p>3600 Olentangy River Rd. Suite B</p>
+                            <p>Columbus, OH 43214</p>
+                            <p>614.545.3312</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <p class="copyright">Copyright 2023</p>
+    </footer>
+    <script src="scripts/vit.js"></script>
+</body>
+</html>
