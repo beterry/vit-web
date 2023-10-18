@@ -187,6 +187,10 @@ a {
     background: var(--purple);
 }
 
+.green-bk {
+    background: var(--primary-20);
+}
+
 /* ============================ */
 /* TEXT */
 /* ============================ */
@@ -272,6 +276,10 @@ li {
 
 .white-plant.plant-1::before {
     content: url('/images/plants/white-plant-1.svg');
+}
+
+.white-plant.plant-2::before {
+    content: url('/images/plants/white-plant-2.svg');
 }
 
 /* ============================ */
@@ -721,6 +729,112 @@ footer {
     margin: 0 auto;
     display: inline-block;
     width: 60px;
+}
+
+/* ============================ */
+/* VISION THERAPY */
+/* ============================ */
+
+#vision-process {
+    padding: var(--section-padding);
+    border-radius: 8px;
+}
+
+#vision-process h2 {
+    text-align: center;
+    margin-bottom: var(--section-padding);
+}
+
+#vision-process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--section-padding);
+}
+
+#vision-process-steps li > * {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#vision-process-steps h3 {
+    margin-block: 8px;
+}
+
+#vision-process-steps img {
+    width: 90px;
+}
+
+#child-vision-section {
+    position: relative;
+    margin-top: var(--section-padding);
+}
+
+#heart-girl {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    max-width: 635px;
+    right: 50%;
+}
+
+#child-vision {
+    display: grid;
+}
+
+@media screen and (min-width: 850px) {
+    #child-vision {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--section-padding);
+    }
+    #heart-girl {
+        display: block;
+    }
+}
+
+#child-vision-heading p {
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#logo-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.logo-block {
+    border-radius: 8px;
+    padding: clamp(24px, 3vw, 48px);
+    box-shadow: 0 0 10px 5px rgba(14, 125, 103, 0.08);
+}
+
+.logo-block img {
+    height: 60px;
+}
+
+@media screen and (min-width: 800px) {
+    #logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#all-ages {
+    display: grid;
+    gap: var(--section-padding);
+    align-items: center;
+    padding-block: var(--section-padding);
+}
+
+#all-ages-wrapper img{
+    margin: 0 auto;
+    width: 420px;
+}
+
+@media screen and (min-width: 700px) {
+    #all-ages {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ============================ */
