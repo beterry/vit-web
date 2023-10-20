@@ -317,6 +317,20 @@ li {
     right: 100%;
 }
 
+#child-vision-flower {
+    width: clamp(75px, 20vw, 150px);
+    position: absolute;
+    top: clamp(-75px, -10vw, -25px);
+    right: max(calc(10% - 50px), calc((40% - 600px) + 10%));
+}
+
+#all-ages-flower {
+    width: clamp(75px, 20%, 120px);
+    position: absolute;
+    bottom: max(10%, 16px);
+    right: max(10%, 16px);
+}
+
 @media screen and (max-width: 1399px) {
     #team-flower {
         left: 0;
@@ -326,6 +340,9 @@ li {
 @media screen and (max-width: 599px) {
     #team-flower {
         top: calc(-50px - 16px);
+    }
+    #child-vision-flower {
+        right: 16px;
     }
 }
 
@@ -871,7 +888,11 @@ footer {
     padding-block: var(--section-padding);
 }
 
-#all-ages-wrapper img{
+#all-ages-wrapper {
+    position: relative;
+}
+
+#all-ages-img{
     margin: 0 auto;
     width: 420px;
 }
