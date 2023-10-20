@@ -251,16 +251,17 @@ li {
 /* PLANTS */
 /* ============================ */
 
-.white-plant {
+.plant-section {
     position: relative;
+    overflow: hidden;
 }
 
-.white-plant > * {
+.plant-section > * {
     position: relative;
     z-index: 1;
 }
 
-.white-plant::before {
+.plant-section::before {
     width: 200px;
     position: absolute;
     bottom: -16px;
@@ -269,17 +270,23 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
-    .white-plant::before {
+    .plant-section::before {
         opacity: .5;
     }
 }
 
-.white-plant.plant-1::before {
+.plant-section.white-plant-1::before {
     content: url('/images/plants/white-plant-1.svg');
 }
 
-.white-plant.plant-2::before {
+.plant-section.white-plant-2::before {
     content: url('/images/plants/white-plant-2.svg');
+}
+
+.plant-section.green-plant-1::before {
+    width: 150px;
+    bottom: -8px;
+    content: url('/images/plants/green-plant-1.svg');
 }
 
 /* ============================ */
@@ -840,6 +847,10 @@ footer {
 /* ============================ */
 /* SERVICE PAGES */
 /* ============================ */
+
+.service-hero {
+    padding-bottom: var(--section-padding);
+}
 
 .service-hero-content {
     max-width: 700px;
