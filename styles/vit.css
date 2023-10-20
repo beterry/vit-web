@@ -753,14 +753,16 @@ footer {
 }
 
 #vision-process-steps {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: var(--section-padding);
+    z-index: 2;
 }
 
-#vision-process-steps li > * {
-    margin: 0 auto;
-    text-align: center;
+#vision-process-steps li {
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
 #vision-process-steps h3 {
@@ -774,6 +776,42 @@ footer {
 #child-vision-section {
     position: relative;
     margin-top: var(--section-padding);
+}
+
+#through-line-wrapper {
+    position: relative;
+}
+
+.through-line {
+    position: absolute;
+    border-radius: 1px;
+    background-color: white;
+    opacity: .5;
+    z-index: 1;
+
+    top: 45px;
+    left: 45px;
+    bottom: 45px;
+    width: 2px;
+}
+
+@media screen and (min-width: 1000px) {
+    #vision-process-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #vision-process-steps li {
+        display: block;
+    }
+    #vision-process-steps li * {
+        margin-inline: auto;
+        text-align: center;
+    }
+    .through-line {
+        width: 70%;
+        top: 45px;
+        left: 15%;
+        height: 2px;
+    }
 }
 
 #heart-girl {
