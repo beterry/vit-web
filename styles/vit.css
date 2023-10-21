@@ -940,14 +940,21 @@ footer {
 
 .nr-info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: var(--section-padding);
-    align-items: center;
 }
 
 #nr-main-img {
     width: 420px;
-    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    .nr-info-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    #nr-main-img {
+        margin: 0 auto;
+    }
 }
 
 /* ============================ */
