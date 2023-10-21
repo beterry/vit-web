@@ -295,7 +295,7 @@ li {
     content: url('/images/plants/green-plant-2.svg');
 }
 
-.plant-section.green-plant-2::before {
+.plant-section.green-plant-3::before {
     width: 200px;
     content: url('/images/plants/green-plant-3.svg');
 }
