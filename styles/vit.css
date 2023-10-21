@@ -295,6 +295,29 @@ li {
     content: url('/images/plants/green-plant-2.svg');
 }
 
+.plant-section.green-plant-2::before {
+    width: 200px;
+    content: url('/images/plants/green-plant-3.svg');
+}
+
+.fern-sun {
+    position: relative;
+}
+
+.fern-sun::after {
+    content: url("/images/plants/fern-sun.svg");
+    position: absolute;
+    top: 100px;
+    right: calc((40% - 600px) + 10%);
+    width: 372px;
+}
+
+@media screen and (max-width: 1280px) {
+    .fern-sun::after {
+        display: none;
+    }
+}
+
 /* ============================ */
 /* FLOWERS */
 /* ============================ */
@@ -344,6 +367,13 @@ li {
     left: max(calc(15% - 32px), calc((40% - 600px) + 15%));
 }
 
+#contact-us-flower-2 {
+    width: 100px;
+    position: absolute;
+    top: -50px;
+    left: max(calc(10% - 32px), calc((40% - 600px) + 10%));
+}
+
 @media screen and (max-width: 1399px) {
     #team-flower {
         left: 0;
@@ -356,6 +386,12 @@ li {
     }
     #child-vision-flower {
         right: 16px;
+    }
+    #contact-us-flower-2 {
+        width: 50px;
+        position: absolute;
+        top: -25px;
+        left: 10%;
     }
 }
 
@@ -740,24 +776,6 @@ footer {
     text-transform: uppercase;
 }
 
-#how-we-do-it {
-    position: relative;
-}
-
-#how-we-do-it::after {
-    content: url("/images/plants/fern-sun.svg");
-    position: absolute;
-    top: 100px;
-    right: calc((40% - 600px) + 10%);
-    width: 372px;
-}
-
-@media screen and (max-width: 1280px) {
-    #how-we-do-it::after {
-        display: none;
-    }
-}
-
 #testimonial-section, #contact-us-section {
     justify-content: center;
 }
@@ -917,7 +935,7 @@ footer {
 }
 
 /* ============================ */
-/* VISION THERAPY */
+/* NEURO REHAB */
 /* ============================ */
 
 .nr-info-grid {
@@ -930,6 +948,31 @@ footer {
 #nr-main-img {
     width: 420px;
     margin: 0 auto;
+}
+
+/* ============================ */
+/* OCCUPATIONAL THERAPY */
+/* ============================ */
+
+.our-experts-grid {
+    display: grid;
+    gap: var(--section-padding);
+    align-items: center;
+}
+
+#our-experts-main-img {
+    width: 420px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    .our-experts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#ot-contact-section {
+    margin-top: var(--section-padding);
 }
 
 /* ============================ */
