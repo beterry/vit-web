@@ -289,6 +289,12 @@ li {
     content: url('/images/plants/green-plant-1.svg');
 }
 
+.plant-section.green-plant-2::before {
+    width: 150px;
+    bottom: -8px;
+    content: url('/images/plants/green-plant-2.svg');
+}
+
 /* ============================ */
 /* FLOWERS */
 /* ============================ */
@@ -901,6 +907,22 @@ footer {
     #all-ages {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* ============================ */
+/* VISION THERAPY */
+/* ============================ */
+
+.nr-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--section-padding);
+    align-items: center;
+}
+
+#nr-main-img {
+    width: 420px;
+    margin: 0 auto;
 }
 
 /* ============================ */
