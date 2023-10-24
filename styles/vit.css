@@ -300,6 +300,11 @@ li {
     content: url('/images/plants/green-plant-3.svg');
 }
 
+.plant-section.green-plant-4::before {
+    width: 250px;
+    content: url('/images/plants/green-plant-4.svg');
+}
+
 .fern-sun {
     position: relative;
 }
@@ -980,6 +985,33 @@ footer {
 
 #ot-contact-section {
     margin-top: var(--section-padding);
+}
+
+/* ============================ */
+/* SENSORY PROCESSING THERAPY */
+/* ============================ */
+
+.sp-grid {
+    display: grid;
+    gap: var(--section-padding);
+}
+
+@media screen and (min-width: 900px) {
+    .sp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#mother-kid {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 899px) {
+    #mother-kid {
+        display: none;
+    }
 }
 
 /* ============================ */
