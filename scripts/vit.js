@@ -6,7 +6,6 @@ const toggleMobileNav = () => {
 }
 
 const readMoreBtns = document.querySelectorAll('.read-more-btn');
-console.log(readMoreBtns)
 
 readMoreBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
