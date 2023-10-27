@@ -16,16 +16,6 @@
     --section-padding-xl: clamp(16px, 10vw, 128px);
 }
 
-/* REVMOVE */
-.logo {
-    background-color: var(--primary);
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 50%;
-}
-/* REVMOVE */
-
 html {
 
 }
@@ -536,7 +526,7 @@ header {
     width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 975px) {
     #mobilenav-btn {
         display: none;
     }
@@ -591,6 +581,10 @@ header {
     }
 }
 
+.vit-logo-header {
+    width: 175px;
+}
+
 /* ============================ */
 /* FOOTER */
 /* ============================ */
@@ -616,6 +610,10 @@ footer {
     }
     .footer-about {
         flex-direction: row;
+    }
+    .footer-about > a {
+        width: 56px;
+        flex-shrink: 0;
     }
 }
 
@@ -646,13 +644,15 @@ footer {
     }
 }
 
-
 .copyright {
     color: var(--gray-text);
     padding-block: 16px;
     text-align: center;
 }
 
+.vit-icon-footer {
+    width: 56px;
+}
 
 /* ============================ */
 /* HOME PAGE */
