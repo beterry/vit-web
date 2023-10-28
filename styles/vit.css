@@ -191,6 +191,8 @@ a {
 
 .txt-centered {
     text-align: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .txt-highlight {
@@ -274,6 +276,7 @@ li {
 }
 
 .plant-section.white-plant-5::before {
+    width: 230px;
     content: url('/images/plants/white-plant-5.svg');
 }
 
