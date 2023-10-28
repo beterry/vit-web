@@ -1,0 +1,47 @@
+#contact-info {
+    display: grid;
+    gap: var(--section-padding);
+}
+
+#contact-info h1 {
+    font-size: 2.5rem;
+}
+
+#contact-info h2 {
+    font-size: 1rem;
+    margin-bottom: .75rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.address-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.contact-info-img-wrapper{
+    text-align: center;
+}
+
+.contact-info-img {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin-left: -24px;
+}
+
+@media screen and (min-width: 1000px) {
+    #contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-info-img {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .address-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
