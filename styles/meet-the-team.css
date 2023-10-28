@@ -1,0 +1,63 @@
+.mtt-intro-text {
+    margin: 0 auto;
+}
+
+.meet-doctor {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.meet-doctor-img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    flex-shrink: 0;
+}
+
+.meet-doctor-img {
+    width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+    .meet-doctor {
+        flex-direction: row;
+        gap: var(--section-padding);
+        align-items: center;
+    }
+    .meet-jake {
+        flex-direction: row-reverse;
+    }
+}
+
+#team-list {
+    padding-top: 0;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.team-member-img {
+    width: 150px;
+    border-radius: 4px;
+}
+
+.team-member:not(:last-of-type) .team-member-content {
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 24px;
+}
+
+.team-member:not(:first-of-type) {
+    padding-top: 24px;
+}
+
+@media screen and (min-width: 900px) {
+    .team-member {
+        flex-direction: row;
+        gap: 24px;
+        align-items: start;
+    }
+}

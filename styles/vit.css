@@ -388,6 +388,13 @@ li {
     right: max(calc(10% - 32px), calc((40% - 600px) + 10%));
 }
 
+#curtis-flower {
+    width: clamp(30px, 20%, 120px);
+    position: absolute;
+    top: max(20%, 16px);
+    right: max(10%, 16px);
+}
+
 @media screen and (max-width: 1399px) {
     #team-flower {
         left: 0;
