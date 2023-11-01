@@ -18,10 +18,6 @@
     --section-padding-xl: clamp(16px, 10vw, 128px);
 }
 
-html {
-
-}
-
 body {
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -238,10 +234,6 @@ ul, ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-li {
-    
 }
 
 .checklist {
@@ -566,10 +558,6 @@ header.detached .vit-logo-header {
     margin-left: 8px;
 }
 
-#services-dropdown {
-    
-}
-
 #services-dropdown li {
     display: block;
 }
@@ -647,9 +635,6 @@ header.detached .vit-logo-header {
 /* ============================ */
 /* FOOTER */
 /* ============================ */
-
-footer {
-}
 
 .footer-grid {
     display: grid;
