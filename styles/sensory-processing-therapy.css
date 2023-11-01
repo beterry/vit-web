@@ -1,0 +1,30 @@
+.sp-grid {
+    display: grid;
+    gap: var(--section-padding);
+}
+
+@media screen and (min-width: 900px) {
+    .sp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#mother-kid-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#mother-kid {
+    width: 100%;
+}
+
+@media screen and (max-width: 899px) {
+    #mother-kid-wrapper {
+        display: none;
+    }
+}
+
+#sp-logos {
+    padding-top: 0;
+}

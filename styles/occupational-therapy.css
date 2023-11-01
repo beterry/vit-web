@@ -1,0 +1,25 @@
+.our-experts-grid {
+    display: grid;
+    gap: var(--section-padding);
+    align-items: center;
+}
+
+#our-experts-main-img {
+    width: 420px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    .our-experts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#ot-contact-section {
+    margin-top: var(--section-padding);
+}
+
+/* override fern size */
+#all-ages::after {
+    width: 285px;
+}

@@ -1,0 +1,173 @@
+#hero {
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    
+    align-items: center;
+    gap: 32px;
+
+    padding-top: var(--section-padding);
+}
+
+.hero-content {
+    padding-bottom: var(--section-padding);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+#hero-content-btn {
+    margin-top: 8px;
+}
+
+.hero-img-wrapper {
+    position: relative;
+}
+
+.hero-img {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -96px;
+    max-width: 700px;
+}
+
+@media screen and (min-width: 750px) {
+    .hero-content p {
+        padding-right: 64px;
+    }
+    .hero-img {
+        display: block;
+    }
+    .hero-grid {
+        grid-template-columns: 50% 1fr;
+    }
+    .hero-img-wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        min-height: 500px;
+        width: 100%;
+    }
+    #hero-img-flower-2 {
+        top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
+        right: 15%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .hero-img {
+        left: auto;
+    }
+    #hero-img-flower-1 {
+        left: calc(-30px - ((700px - 100%) / 2));
+    }
+}
+
+.services-section {
+    display: grid;
+    gap: var(--section-padding);
+    align-items: start;
+}
+
+@media screen and (min-width: 1020px) {
+    .services-section {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+.services-section {
+    position: relative;
+}
+
+.services-grid {
+    display: grid;
+    gap: 24px;
+}
+
+@media screen and (min-width: 700px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 5px rgba(14, 125, 103, 0.08);
+    padding: 16px 20px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all .25s;
+}
+
+.service-card:hover {
+    box-shadow: 0 0 15px 5px rgba(14, 125, 103, 0.15);
+    transform: scale(1.05);
+}
+
+.service-card img {
+    width: 50px;
+    transition: all .1s;
+}
+
+.service-card:hover img {
+    transform: scale(1.15);
+}
+
+.team-grid {
+    display: grid;
+    gap: var(--section-padding);
+    align-items: center;
+}
+
+@media screen and (min-width: 860px) {
+    .team-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    .team-grid {
+        grid-template-columns: 445px 1fr;
+    }
+}
+
+.team-image {
+    width: 100%;
+    max-width: 445px;
+}
+
+#vision-therapy {
+    position: relative;
+    overflow: hidden;
+}
+
+#vision-therapy h3 {
+    font-family: 'Lilita One', cursive;
+    color: black;
+    background-color: var(--primary-10);
+    padding: 16px 24px;
+}
+
+#vision-therapy h3 strong {
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+#testimonial-section, #contact-us-section {
+    justify-content: center;
+}
+
+.testimonial-quote {
+    margin: 0 auto;
+    display: inline-block;
+    width: 60px;
+}

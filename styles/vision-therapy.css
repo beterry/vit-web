@@ -1,0 +1,142 @@
+#vision-process {
+    padding: 24px;
+    border-radius: 8px;
+}
+
+#vision-process h2 {
+    text-align: center;
+    margin-bottom: var(--section-padding);
+}
+
+#vision-process-steps {
+    position: relative;
+    display: grid;
+    gap: var(--section-padding);
+    z-index: 2;
+}
+
+#vision-process-steps li {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+#vision-process-steps h3 {
+    margin-block: 8px;
+}
+
+#vision-process-steps p {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+#vision-process-steps img {
+    width: 90px;
+}
+
+#child-vision-section {
+    position: relative;
+    margin-top: var(--section-padding);
+}
+
+#through-line-wrapper {
+    position: relative;
+}
+
+.through-line {
+    position: absolute;
+    border-radius: 1px;
+    background-color: white;
+    opacity: .5;
+    z-index: 1;
+
+    top: 45px;
+    left: 45px;
+    bottom: 45px;
+    width: 2px;
+}
+
+@media screen and (min-width: 600px) {
+    #vision-process {
+        padding: var(--section-padding);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #vision-process-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #vision-process-steps li {
+        display: block;
+    }
+    #vision-process-steps li * {
+        margin-inline: auto;
+        text-align: center;
+    }
+    .through-line {
+        width: 70%;
+        top: 45px;
+        left: 15%;
+        height: 2px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #vision-process-steps img {
+        width: 50px;
+    }
+    .through-line {
+        left: 25px;
+    }
+}
+
+#heart-girl {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    max-width: 635px;
+    right: 50%;
+}
+
+#child-vision {
+    display: grid;
+}
+
+@media screen and (min-width: 850px) {
+    #child-vision {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--section-padding);
+    }
+    #heart-girl {
+        display: block;
+    }
+}
+
+#child-vision-heading p {
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#all-ages {
+    display: grid;
+    gap: var(--section-padding);
+    align-items: center;
+    padding-block: var(--section-padding);
+}
+
+#all-ages-wrapper {
+    position: relative;
+}
+
+#all-ages-img{
+    margin: 0 auto;
+    width: 420px;
+}
+
+@media screen and (min-width: 700px) {
+    #all-ages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

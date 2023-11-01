@@ -5,6 +5,8 @@
     --primary-20: hsl(168, 80%, 27%, .2);
     --primary-10: hsl(168, 80%, 27%, .1);
 
+    --primary-vivid: #00a484;
+
     --blue: #DEF0FF;
 
     --purple: #E2D9FB;
@@ -21,6 +23,7 @@ html {
 }
 
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -34,21 +37,41 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.625rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
 }
 
 h4 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.25rem;
+    }
 }
 
 p, button, a {
@@ -79,6 +102,10 @@ a {
 
     /* link specific */
     text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--primary-vivid);
 }
 
 .btn.inline {
@@ -130,6 +157,10 @@ a {
 
 .content-stack.stack-section {
     gap: var(--section-padding);
+}
+
+.content-stack p {
+    line-height: 1.75;
 }
 
 .page-section {
@@ -343,7 +374,7 @@ li {
 #hero-img-flower-2 {
     width: clamp(100px, 20vw, 200px);
     position: absolute;
-    top: clamp(-84px, -10vw, -184px);
+    top: clamp(-50px, -10vw, -100px);
     right: max(calc(10% - 50px), calc((40% - 600px) + 10%))
 }
 
@@ -410,6 +441,7 @@ li {
 
 @media screen and (max-width: 599px) {
     #team-flower {
+        width: 70px;
         top: calc(-50px - 16px);
     }
     #child-vision-flower {
@@ -428,7 +460,21 @@ li {
 /* ============================ */
 
 header {
+    position: sticky;
+    top: 0;
     padding-block: 1.5rem;
+    background-color: white;
+    z-index: 200;
+    transition: all .5s;
+}
+
+header.detached {
+    box-shadow: 0 2px 5px 2px rgba(14, 125, 103, 0.08);
+    padding-block: 1rem;
+}
+
+header.detached .vit-logo-header {
+    width: 100px;
 }
 
 #header-wrapper {
@@ -489,13 +535,15 @@ header {
 }
 
 #topnav-links a {
-    padding-block: 16px;
     font-weight: 700;
 }
 
 @media screen and (max-width: 899px) {
     #topnav-links a:not(.outline) {
         justify-content: start;
+        padding-block: 16px;
+    }
+    #topnav-links a {
         padding-block: 16px;
     }
 }
@@ -592,6 +640,7 @@ header {
 }
 
 .vit-logo-header {
+    transition: all .3s;
     width: 175px;
 }
 
@@ -620,6 +669,10 @@ footer {
     }
     .footer-about {
         flex-direction: row;
+        padding-right: 48px;
+    }
+    .footer-about-content {
+        padding-top: 16px;
     }
     .footer-about > a {
         width: 56px;
@@ -642,6 +695,10 @@ footer {
     justify-content: center;
 }
 
+.social-link:hover {
+    background-color: var(--primary-vivid);
+}
+
 .footer-services h3 {
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -658,6 +715,7 @@ footer {
     color: var(--gray-text);
     padding-block: 16px;
     text-align: center;
+    border-top: 1px solid var(--primary-20);
 }
 
 .vit-icon-footer {
@@ -665,154 +723,8 @@ footer {
 }
 
 /* ============================ */
-/* HOME PAGE */
+/* CTA SECTIONS */
 /* ============================ */
-
-#hero {
-    overflow: hidden;
-}
-
-.hero-grid {
-    display: grid;
-    
-    align-items: center;
-    gap: 32px;
-
-    padding-top: var(--section-padding);
-}
-
-.hero-content {
-    padding-bottom: var(--section-padding);
-}
-
-.hero-img-wrapper {
-    position: relative;
-}
-
-
-
-.hero-img {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: -96px;
-    max-width: 700px;
-}
-
-@media screen and (min-width: 750px) {
-    .hero-content p {
-        padding-right: 64px;
-    }
-    .hero-img {
-        display: block;
-    }
-    .hero-grid {
-        grid-template-columns: 50% 1fr;
-    }
-    .hero-img-wrapper {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        height: 100%;
-        min-height: 500px;
-        width: 100%;
-    }
-    #hero-img-flower-2 {
-        top: clamp(-110px, calc((-20vw / 2 - 10px)), -50px);
-        right: 15%;
-    }
-}
-
-@media screen and (min-width: 1080px) {
-    .hero-img {
-        left: auto;
-    }
-    #hero-img-flower-1 {
-        left: calc(-30px - ((700px - 100%) / 2));
-    }
-}
-
-.services-section {
-    display: grid;
-    gap: var(--section-padding);
-    align-items: start;
-}
-
-@media screen and (min-width: 1020px) {
-    .services-section {
-        grid-template-columns: 1fr 1.5fr;
-    }
-}
-
-.services-section {
-    position: relative;
-}
-
-.services-grid {
-    display: grid;
-    gap: 24px;
-}
-
-@media screen and (min-width: 700px) {
-    .services-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.service-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 10px 5px rgba(14, 125, 103, 0.08);
-    padding: 16px 20px;
-    font-weight: 700;
-    border-radius: 4px;
-}
-
-.service-card img {
-    width: 50px;
-}
-
-.team-grid {
-    display: grid;
-    gap: var(--section-padding);
-    align-items: center;
-}
-
-@media screen and (min-width: 860px) {
-    .team-grid {
-        grid-template-columns: 1.5fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1040px) {
-    .team-grid {
-        grid-template-columns: 445px 1fr;
-    }
-}
-
-.team-image {
-    width: 100%;
-    max-width: 445px;
-}
-
-#vision-therapy {
-    position: relative;
-    overflow: hidden;
-}
-
-#vision-therapy h3 {
-    color: black;
-    background-color: var(--primary-10);
-    padding: 16px 24px;
-}
-
-#vision-therapy h3 strong {
-    color: var(--primary);
-    text-transform: uppercase;
-}
 
 #testimonial-section, #contact-us-section {
     justify-content: center;
@@ -825,111 +737,10 @@ footer {
 }
 
 /* ============================ */
-/* VISION THERAPY */
+/* LOGO GRIDS */
 /* ============================ */
 
-#vision-process {
-    padding: var(--section-padding);
-    border-radius: 8px;
-}
-
-#vision-process h2 {
-    text-align: center;
-    margin-bottom: var(--section-padding);
-}
-
-#vision-process-steps {
-    position: relative;
-    display: grid;
-    gap: var(--section-padding);
-    z-index: 2;
-}
-
-#vision-process-steps li {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-#vision-process-steps h3 {
-    margin-block: 8px;
-}
-
-#vision-process-steps img {
-    width: 90px;
-}
-
-#child-vision-section {
-    position: relative;
-    margin-top: var(--section-padding);
-}
-
-#through-line-wrapper {
-    position: relative;
-}
-
-.through-line {
-    position: absolute;
-    border-radius: 1px;
-    background-color: white;
-    opacity: .5;
-    z-index: 1;
-
-    top: 45px;
-    left: 45px;
-    bottom: 45px;
-    width: 2px;
-}
-
-@media screen and (min-width: 1000px) {
-    #vision-process-steps {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    #vision-process-steps li {
-        display: block;
-    }
-    #vision-process-steps li * {
-        margin-inline: auto;
-        text-align: center;
-    }
-    .through-line {
-        width: 70%;
-        top: 45px;
-        left: 15%;
-        height: 2px;
-    }
-}
-
-#heart-girl {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    width: auto;
-    max-width: 635px;
-    right: 50%;
-}
-
-#child-vision {
-    display: grid;
-}
-
-@media screen and (min-width: 850px) {
-    #child-vision {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--section-padding);
-    }
-    #heart-girl {
-        display: block;
-    }
-}
-
-#child-vision-heading p {
-    color: var(--primary);
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-#logo-grid {
+.logo-grid {
     display: grid;
     gap: 24px;
 }
@@ -945,186 +756,8 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
-    #logo-grid {
+    .logo-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-#all-ages {
-    display: grid;
-    gap: var(--section-padding);
-    align-items: center;
-    padding-block: var(--section-padding);
-}
-
-#all-ages-wrapper {
-    position: relative;
-}
-
-#all-ages-img{
-    margin: 0 auto;
-    width: 420px;
-}
-
-@media screen and (min-width: 700px) {
-    #all-ages {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ============================ */
-/* NEURO REHAB */
-/* ============================ */
-
-.nr-info-grid {
-    display: grid;
-    gap: var(--section-padding);
-}
-
-#nr-main-img {
-    width: 420px;
-}
-
-@media screen and (min-width: 1000px) {
-    .nr-info-grid {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-    #nr-main-img {
-        margin: 0 auto;
-    }
-}
-
-/* ============================ */
-/* OCCUPATIONAL THERAPY */
-/* ============================ */
-
-.our-experts-grid {
-    display: grid;
-    gap: var(--section-padding);
-    align-items: center;
-}
-
-#our-experts-main-img {
-    width: 420px;
-    margin: 0 auto;
-}
-
-@media screen and (min-width: 1000px) {
-    .our-experts-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-#ot-contact-section {
-    margin-top: var(--section-padding);
-}
-
-/* ============================ */
-/* SENSORY PROCESSING THERAPY */
-/* ============================ */
-
-.sp-grid {
-    display: grid;
-    gap: var(--section-padding);
-}
-
-@media screen and (min-width: 900px) {
-    .sp-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-#mother-kid {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 899px) {
-    #mother-kid {
-        display: none;
-    }
-}
-
-/* ============================ */
-/* SPORTS VISION TRAINING */
-/* ============================ */
-
-.svt-intro-grid {
-    display: grid;
-    gap: var(--section-padding);
-    align-items: center;
-}
-
-#svt-intro-main-img {
-    width: 500px;
-    margin: 0 auto;
-}
-
-@media screen and (min-width: 1000px) {
-    .svt-intro-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-#svt-helps-grid {
-    display: grid;
-    gap: 16px;
-}
-
-.svt-helps-item {
-    display: grid;
-    gap: 16px;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px 5px rgba(14, 125, 103, 0.08);
-}
-
-@media screen and (min-width: 800px) {
-    #svt-helps-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-#svt-graphics {
-    position: relative;
-    margin-block: var(--section-padding);
-    padding: var(--section-padding);
-    border-radius: 8px;
-}
-
-.svt-graphic-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.svt-graphic-img {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    object-fit: contain;
-}
-
-.svt-graphics-rule {
-    height: 1px;
-    background-color: white;
-    margin-block: var(--section-padding);
-}
-
-@media screen and (min-width: 900px) {
-    .svt-graphic-grid {
-        gap: 24px;
-     }
-    .graphic-grid-1 {
-        flex-direction: row;
-    }
-    .graphic-grid-2 {
-        flex-direction: row-reverse;
-    }
-    .svt-graphic-img {
-        width: 60%;
     }
 }
 

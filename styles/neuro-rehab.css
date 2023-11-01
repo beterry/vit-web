@@ -1,0 +1,22 @@
+.nr-info-grid {
+    display: grid;
+    gap: var(--section-padding);
+}
+
+#nr-main-img {
+    width: 420px;
+}
+
+@media screen and (min-width: 1000px) {
+    .nr-info-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    #nr-main-img {
+        margin: 0 auto;
+    }
+}
+
+#neuro-rehab-logos {
+    margin-bottom: var(--section-padding);
+}

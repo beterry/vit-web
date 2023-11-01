@@ -47,17 +47,17 @@
 
 .team-member:not(:last-of-type) .team-member-content {
     border-bottom: 1px solid var(--gray-light);
-    padding-bottom: 24px;
+    padding-bottom: 48px;
 }
 
 .team-member:not(:first-of-type) {
-    padding-top: 24px;
+    padding-top: 48px;
 }
 
 @media screen and (min-width: 900px) {
     .team-member {
         flex-direction: row;
-        gap: 24px;
+        gap: 48px;
         align-items: start;
     }
 }

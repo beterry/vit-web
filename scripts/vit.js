@@ -33,3 +33,14 @@ const changeReadMoreButtonText = (btn) => {
     const text = btn.innerText;
     btn.innerText = text === 'Read More' ? 'Read Less' : 'Read More';
 }
+
+addEventListener("scroll", (event) => {
+    const scrollY = window.scrollY;
+    const header = document.querySelector('header');
+
+    if (scrollY > 0) {
+        header.classList.add('detached');
+    } else {
+        header.classList.remove('detached');
+    }
+});
