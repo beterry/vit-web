@@ -291,43 +291,43 @@ ul, ol {
 }
 
 .plant-section.white-plant-1::before {
-    content: url('/images/plants/white-plant-1.svg');
+    content: url("/images/plants/white-plant-1.svg");
 }
 
 .plant-section.white-plant-2::before {
-    content: url('/images/plants/white-plant-2.svg');
+    content: url("/images/plants/white-plant-2.svg");
 }
 
 .plant-section.white-plant-5::before {
     width: 230px;
-    content: url('/images/plants/white-plant-5.svg');
+    content: url("/images/plants/white-plant-5.svg");
 }
 
 .plant-section.green-plant-1::before {
     width: 150px;
     bottom: -8px;
-    content: url('/images/plants/green-plant-1.svg');
+    content: url("/images/plants/green-plant-1.svg");
 }
 
 .plant-section.green-plant-2::before {
     width: 150px;
     bottom: -8px;
-    content: url('/images/plants/green-plant-2.svg');
+    content: url("/images/plants/green-plant-2.svg");
 }
 
 .plant-section.green-plant-3::before {
     width: 200px;
-    content: url('/images/plants/green-plant-3.svg');
+    content: url("/images/plants/green-plant-3.svg");
 }
 
 .plant-section.green-plant-4::before {
     width: 250px;
-    content: url('/images/plants/green-plant-4.svg');
+    content: url("/images/plants/green-plant-4.svg");
 }
 
 .plant-section.green-plant-5::before {
     width: 200px;
-    content: url('/images/plants/green-plant-5.svg');
+    content: url("/images/plants/green-plant-5.svg");
 }
 
 .fern-sun {
