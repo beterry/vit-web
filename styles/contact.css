@@ -1,6 +1,7 @@
 #contact-info {
     display: grid;
     gap: var(--section-padding);
+    padding-bottom: 0px;
 }
 
 #contact-info h1 {
@@ -44,4 +45,84 @@
     .address-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+#contact-form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 5px 2px rgba(14, 125, 103, 0.08);
+
+    display: grid;
+    gap: 24px;
+}
+
+.form-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.main-label {
+    display: block;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.text-input, .textarea-input {
+    padding: 8px 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+}
+
+.text-input::placeholder, .textarea-input::placeholder {
+    color: var(--gray-medium);
+}
+
+
+.form-group {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+}
+
+.form-group.hidden {
+    display: none;
+}
+
+fieldset.form-group {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+fieldset.form-group legend {
+    margin-bottom: 8px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 24px;
+}
+
+#concern-group {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#concern {
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+@media screen and (min-width: 850px) {
+    #contact-form {
+        padding: var(--section-padding);
+    }
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
 }

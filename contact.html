@@ -93,30 +93,64 @@
                     </div>
                 </div>
             </section>
-            <!-- <form>
-                <h2>Contact Us</h2>
-                <div class="form-grid">
-                    <div class="content-stack">
-                        <div>
-                            <label>Full Name</label>
-                            <input type=text placeholder="Enter full name" />
+            <section class="page-section wrapper">
+                <form id="contact-form">
+                    <h2>Get in Touch</h2>
+                    <div class="form-grid">
+                        <div class="content-stack">
+                            <div class="form-group">
+                                <label for="name" class="main-label">Full Name</label>
+                                <input if="name" type="text" placeholder="First and last name" class="text-input" required/>
+                            </div>
+                            <fieldset class="form-group">
+                                <legend class="main-label">Are you the primary patient?</legend>
+                                <div class="radio-group">
+                                    <div>
+                                        <input id="yes-primary" name="is-primary" value="yes" checked type="radio" />
+                                        <label for="yes-primary">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input id="no-primary" name="is-primary" value="no" type="radio"/>
+                                        <label for="no-primary">No</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div id="patient-name-group" class="form-group hidden">
+                                <label for="patient-name" class="main-label">Patient's Full Name</label>
+                                <input id="patient-name" type="text" placeholder="First and last name" class="text-input"/>
+                            </div>
+                            <fieldset class="form-group">
+                                <legend class="main-label">How would you like us to contact you?</legend>
+                                <div class="radio-group">
+                                    <div>
+                                        <input id="contact-type-phone" name="contact-type" value="phone" type="radio" checked />
+                                        <label for="contact-type-phone">Phone call</label>
+                                    </div>
+                                    <div>
+                                        <input id="contact-type-email" name="contact-type" value="email" type="radio" />
+                                        <label for="contact-type-email">Email</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div id="phone-group" class="form-group">
+                                <label for="phone" class="main-label">Phone Number (xxx-xxx-xxxx)</label>
+                                <input id="phone" type="tel" placeholder="777-888-9999" class="text-input" required/>
+                            </div>
+                            <div id="email-group" class="form-group hidden">
+                                <label for="email" class="main-label">Email Address</label>
+                                <input id="email" type="email" placeholder="example@test.com" class="text-input"/>
+                            </div>
                         </div>
                         <div>
-                            <p>Are you the primary patient?</p>
-                            <div>
-                                <div>
-                                    <input type="radio" />
-                                    <label>Yes</label>
-                                </div>
-                                <div>
-                                    <input type="radio" />
-                                    <label>No</label>
-                                </div>
+                            <div id="concern-group">
+                                <label for="concern" class="main-label">Primary Concern</label>
+                                <textarea id="concern" class="textarea-input" placeholder="What can we help you with?" required></textarea>
+                                <input type="submit" class="btn" />
                             </div>
                         </div>
                     </div>
-                </div>
-            </form> -->
+                </form>
+            </section>
         </div>
     </main>
     <footer class="wrapper">
@@ -162,5 +196,6 @@
         <p class="copyright">© 2023-2024 Vision Integration Team</p>
     </footer>
     <script src="scripts/vit.js"></script>
+    <script src="scripts/contact.js"></script>
 </body>
 </html>
