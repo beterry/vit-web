@@ -17,6 +17,9 @@
 
     --section-padding: clamp(16px, 10vw, 64px);
     --section-padding-xl: clamp(16px, 10vw, 128px);
+
+    --error: rgb(241, 36, 0);
+    --error-10: rgba(241, 36, 0, 0.1);
 }
 
 body {

@@ -94,57 +94,75 @@
                 </div>
             </section>
             <section class="page-section wrapper">
-                <form id="contact-form">
+                <form id="contact-form" action="https://submit-form.com/bgORZaUha">
+                    <div id="success" class="result-message hidden">
+                        <h3>Thank you!</h3>
+                        <p>Your form has been submitted successfully. We will be in touch shortly.</p>
+                    </div>
+                    <div id="error" class="result-message hidden">
+                        <h3>Oops!</h3>
+                        <p>Something went wrong when submitting this form. Please try again or call us at the number listed above.</p>
+                    </div>
                     <h2>Get in Touch</h2>
                     <div class="form-grid">
                         <div class="content-stack">
                             <div class="form-group">
                                 <label for="name" class="main-label">Full Name</label>
-                                <input if="name" type="text" placeholder="First and last name" class="text-input" required/>
+                                <input id="name" name="Full Name" type="text" placeholder="First and last name" class="text-input" required/>
                             </div>
                             <fieldset class="form-group">
                                 <legend class="main-label">Are you the primary patient?</legend>
                                 <div class="radio-group">
                                     <div>
-                                        <input id="yes-primary" name="is-primary" value="yes" checked type="radio" />
+                                        <input id="yes-primary" name="Is the primary patient" value="yes" checked type="radio" />
                                         <label for="yes-primary">Yes</label>
                                     </div>
                                     <div>
-                                        <input id="no-primary" name="is-primary" value="no" type="radio"/>
+                                        <input id="no-primary" name="Is the primary patient" value="no" type="radio"/>
                                         <label for="no-primary">No</label>
                                     </div>
                                 </div>
                             </fieldset>
                             <div id="patient-name-group" class="form-group hidden">
                                 <label for="patient-name" class="main-label">Patient's Full Name</label>
-                                <input id="patient-name" type="text" placeholder="First and last name" class="text-input"/>
+                                <input id="patient-name" name="Patient's Name" type="text" placeholder="First and last name" class="text-input"/>
                             </div>
                             <fieldset class="form-group">
                                 <legend class="main-label">How would you like us to contact you?</legend>
                                 <div class="radio-group">
                                     <div>
-                                        <input id="contact-type-phone" name="contact-type" value="phone" type="radio" checked />
+                                        <input id="contact-type-phone" name="Contact type" value="phone" type="radio" checked />
                                         <label for="contact-type-phone">Phone call</label>
                                     </div>
                                     <div>
-                                        <input id="contact-type-email" name="contact-type" value="email" type="radio" />
+                                        <input id="contact-type-email" name="Contact type" value="email" type="radio" />
                                         <label for="contact-type-email">Email</label>
                                     </div>
                                 </div>
                             </fieldset>
                             <div id="phone-group" class="form-group">
                                 <label for="phone" class="main-label">Phone Number (xxx-xxx-xxxx)</label>
-                                <input id="phone" type="tel" placeholder="777-888-9999" class="text-input" required/>
+                                <input id="phone" name="Phone" type="tel" placeholder="777-888-9999" class="text-input" required/>
                             </div>
                             <div id="email-group" class="form-group hidden">
                                 <label for="email" class="main-label">Email Address</label>
-                                <input id="email" type="email" placeholder="example@test.com" class="text-input"/>
+                                <input id="email" name="Email" type="email" placeholder="example@test.com" class="text-input"/>
                             </div>
                         </div>
                         <div>
                             <div id="concern-group">
                                 <label for="concern" class="main-label">Primary Concern</label>
-                                <textarea id="concern" class="textarea-input" placeholder="What can we help you with?" required></textarea>
+                                <textarea id="concern" name="concern" class="textarea-input" placeholder="What can we help you with?" required></textarea>
+                                <input
+                                    type="hidden"
+                                    name="_redirect"
+                                    value="www.visionintegrationteam.com/contact-us.html?success=true"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="_error"
+                                    value="www.visionintegrationteam.com/contact-us.html?error=true"
+                                />
                                 <input type="submit" class="btn" />
                             </div>
                         </div>
