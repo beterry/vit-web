@@ -16,46 +16,46 @@
     <title>Vision Therapy | Vision Integration Team</title>
 </head>
 <body>
-    <div id="mobilenav-bk" onclick="toggleMobileNav()"></div>
     <header>
+        <div id="mobilenav-bk" onclick="toggleMobileNav()"></div>
         <div id="header-wrapper" class="wrapper">
-            <a href="index.html">
-                <img class="vit-logo-header" src="images/logos/vit-logo.svg" alt="Vision Integration Team" />
-            </a>
-            <nav id="topnav">
-                <div id="mobilenav-header">
-                    <a href="index.html"><img class="vit-logo-header" src="images/logos/vit-logo.svg" alt="Vision Integration Team" /></a>
-                    <button id="mobilenav-btn" class="btn icon" onclick="toggleMobileNav()">
-                        <span class="material-symbols-outlined">
-                            close
-                        </span>
-                    </button>
+            <a href="index.html"><img class="vit-logo-header" src="images/logos/vit-logo.svg" alt="Vision Integration Team" /></a>
+            <nav id="mainnav" role="navigation">
+                <button id="mobilenav-btn" class="btn icon" aria-expanded="false" aria-controls="mainnav-menu" onclick="toggleMobileNav()">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div id="mainnav-menu">
+                    <div id="mobilenav-header">
+                        <a href="index.html"><img class="mobilenav-header-logo" src="images/logos/vit-logo.svg" alt="Vision Integration Team" /></a>
+                        <button id="mobilenav-header-btn" class="btn icon" onclick="toggleMobileNav()">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <ul id="mainnav-links">
+                        <li id="services-target" class="mainnav-link">
+                            <p>Services</p>
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                            <ul id="services-dropdown">
+                                <li><a class="service-link" href="vision-therapy.html">Vision Therapy</a></li>
+                                <li><a class="service-link" href="neuro-rehab.html">Neuro-Rehab</a></li>
+                                <li><a class="service-link" href="occupational-therapy.html">Occupational Therapy</a></li>
+                                <li><a class="service-link" href="sensory-processing-therapy.html">Sensory Processing Therapy</a></li>
+                                <li><a class="service-link" href="sports-vision-training.html">Sports Vision Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="btn text mainnav-link" href="meet-the-team.html">Meet the Team</a></li>
+                        <li><a class="btn text mainnav-link" href="testimonials.html">Testimonials</a></li>
+                        <div class="spacer"></div>
+                        <li><a class="btn outline" href="contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
-                <ul id="topnav-links">
-                    <li id="services-target" class="topnav-link">
-                        <p>Services</p>
-                        <span class="material-symbols-outlined">
-                            expand_more
-                        </span>
-                        <ul id="services-dropdown">
-                            <li><a class="service-link" href="vision-therapy.html">Vision Therapy</a></li>
-                            <li><a class="service-link" href="neuro-rehab.html">Neuro-Rehab</a></li>
-                            <li><a class="service-link" href="occupational-therapy.html">Occupational Therapy</a></li>
-                            <li><a class="service-link" href="sensory-processing-therapy.html">Sensory Processing Therapy</a></li>
-                            <li><a class="service-link" href="sports-vision-training.html">Sports Vision Training</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="btn text topnav-link" href="meet-the-team.html">Meet the Team</a></li>
-                    <li><a class="btn text topnav-link" href="testimonials.html">Testimonials</a></li>
-                    <div class="spacer"></div>
-                    <li><a class="btn outline" href="contact.html">Contact Us</a></li>
-                </ul>
             </nav>
-            <button id="mobilenav-btn" class="btn icon" onclick="toggleMobileNav()">
-                <span class="material-symbols-outlined">
-                    menu
-                </span>
-            </button>
         </div>
     </header>
     <main>

@@ -1,8 +1,16 @@
 const toggleMobileNav = () => {
-    const mobileNav = document.querySelector('#topnav');
-    const mobileNavBk = document.querySelector('#mobilenav-bk')
-    mobileNav.classList.toggle('show');
+    const mobileNavBtn = document.querySelector('#mobilenav-btn');
+    const menu = document.querySelector('#mainnav-menu');
+    const mobileNavBk = document.querySelector('#mobilenav-bk');
+    menu.classList.toggle('show');
     mobileNavBk.classList.toggle('show');
+
+    const mobileMenuIsShown = menu.classList.contains('show');
+    if (mobileMenuIsShown) {
+        mobileNavBtn.setAttribute('aria-expanded', 'true');
+    } else {
+        mobileNavBtn.setAttribute('aria-expanded', 'false');
+    }
 }
 
 const readMoreBtns = document.querySelectorAll('.read-more-btn');

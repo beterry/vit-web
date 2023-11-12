@@ -456,15 +456,16 @@ ul, ol {
 /* ============================ */
 
 header {
-    position: sticky;
-    top: 0;
     padding-block: 1.5rem;
     background-color: white;
-    z-index: 200;
     transition: all .5s;
 }
 
 header.detached {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
     box-shadow: 0 2px 5px 2px rgba(14, 125, 103, 0.08);
     padding-block: 1rem;
 }
@@ -479,7 +480,7 @@ header.detached .vit-logo-header {
     justify-content: space-between;
 }
 
-#topnav {
+#mainnav-menu {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -488,11 +489,17 @@ header.detached .vit-logo-header {
     right: -80%;
     bottom: 0;
     background-color: white;
-    z-index: 100;
+    z-index: 999;
     padding: 16px;
     padding-top: 0;
-    transition: .5s right;
+    transition: .5s all;
     overflow-y: auto;
+    visibility: hidden;
+}
+
+#mainnav-menu.show {
+    right: 0;
+    visibility: visible;
 }
 
 #mobilenav-header {
@@ -503,43 +510,42 @@ header.detached .vit-logo-header {
     padding-top: 1.5rem;
 }
 
-#topnav-links {
+#mainnav-links {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-#topnav.show {
-    right: 0;
-}
-
 #mobilenav-bk {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
 }
 
 @media screen and (max-width: 899px) {
     #mobilenav-bk.show {
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
-#topnav-links a {
+#mainnav-links a {
     font-weight: 700;
 }
 
 @media screen and (max-width: 899px) {
-    #topnav-links a:not(.outline) {
+    #mainnav-links a:not(.outline) {
         justify-content: start;
         padding-block: 16px;
     }
-    #topnav-links a {
+    #mainnav-links a {
         padding-block: 16px;
     }
 }
@@ -586,14 +592,15 @@ header.detached .vit-logo-header {
     #mobilenav-header {
         display: none;
     }
-    #topnav {
+    #mainnav-menu {
         position: static;
         width: auto;
         background: transparent;
         padding: 0;
         overflow-y: visible;
+        visibility: visible;
     }
-    #topnav-links {
+    #mainnav-links {
         flex-direction: row;
         align-items: center;
         gap: 8px;
@@ -631,7 +638,7 @@ header.detached .vit-logo-header {
     }
 }
 
-.vit-logo-header {
+.vit-logo-header, .mobilenav-header-logo {
     transition: all .3s;
     width: 175px;
 }
