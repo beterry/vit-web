@@ -707,11 +707,21 @@ header.detached .vit-logo-header {
     }
 }
 
-.copyright {
+.footnotes {
     color: var(--gray-text);
     padding-block: 16px;
     text-align: center;
     border-top: 1px solid var(--primary-20);
+}
+
+.acknowledgment {
+    font-size: .65rem;
+}
+
+.acknowledgment a {
+    color: var(--gray-text);
+    text-decoration: underline;
+
 }
 
 .vit-icon-footer {
